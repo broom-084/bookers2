@@ -8,5 +8,14 @@ class UsersController < ApplicationController
   end
   
   def index
+    @user = current_user
+    @users = User.all
+    @book_new = Book.new
+  end
+  
+  private
+  
+  def book_params
+    params.require(:book).permit(:title, :body)
   end
 end
