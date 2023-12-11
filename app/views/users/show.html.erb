@@ -25,13 +25,13 @@
           </td>
           
           <td>
-            <%= link_to book_path(@book.id) do %>
-              <%= @book.title %>
+            <%= link_to book_path(book.id) do %>
+              <%= book.title %>
             <% end %>
           </td>
           
           <td>
-            <%= @book.body %>
+            <%= book.body %>
           </td>
           <% end %>
         </tr>
